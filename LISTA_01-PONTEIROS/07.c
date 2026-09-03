@@ -9,13 +9,17 @@ caracteres das strings.*/
 int compararStrings(char *string1, char *string2)
     {
     int i, j, auxiliar = 1;
-
+    // auxiliar 1 = aqui ele considera, auxiliar como 'verdadeiro' 
     for(i = 0, j = 0; (*string1 != '\0'); ++i)
         {
         while(*(string1 + i) == *(string2 + j))
             {
+            /*  lendo letra por letra de cada string
+                string 1 com 'i'
+                string 2 com j  */
             ++i;
             ++j;
+            /*interrompo o laço apos, o fim da string 2*/
             if(*(string2 + j) == '\n' || *(string2 + j) == '\0')
                 {
                 return 1;
@@ -23,6 +27,9 @@ int compararStrings(char *string1, char *string2)
             else if(*(string2 + j) != *(string1 + i))
                 {
                 auxiliar = 0;
+                /*  aqui ele muda o auxiliar como 0. ou seja,
+                    apos passar no 'else if' ele muda o valor
+                    e vai para o return auxiliar.  */
                 }
             }
         }
@@ -47,6 +54,8 @@ int main()
         }
     else
         {
+        /*entra nesse else apos o 'return auxiliar' la da funcao.
+        quando eu mudei auxiliar para 'zero'.*/
         puts("A segunda string nao se encontra na primeira.");
         }
     return (0);
