@@ -11,14 +11,23 @@ inteiras como índice. */
 void inverte_vetor(int *vetor, int tamanho)
     {
     int *p1_inicio = vetor;
-    int *p1_final = vetor + (5 - 1);
+    int *p1_final = vetor + (tamanho - 1);
+    int aux = 0;
 
     while(p1_inicio != p1_final)
         {
+        aux = *p1_inicio;
         *p1_inicio = *p1_final;
+        *p1_final = aux;
+
         p1_inicio++;
         p1_final--;
 
+
+       // *p1_inicio = *p1_final;
+        //p1_inicio++;
+        //p1_final--;
+        
         if(p1_inicio == p1_final)
             {
             printf("Os ponteiros se encontraram.\n");
@@ -31,7 +40,19 @@ int main()
     {
     int tamanho = 5;
     int vet[tamanho];
+
+    for(int i = 0; i < tamanho; ++i)
+        {
+        printf("Valor na posicao %d: ", i);
+        scanf("%d", &vet[i]);
+        }
     inverte_vetor(vet, tamanho);
 
+    printf("[");
+    for(int i = 0; i < tamanho; ++i)
+        {
+        printf(" %d ", vet[i]);
+        }
+    printf("]");
     return (0);
     }
