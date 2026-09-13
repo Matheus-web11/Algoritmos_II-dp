@@ -5,8 +5,8 @@
 struct AlunoMedia
   {
   float media;/*fazer uma variavel float comum do que de vez fazer
-  um vetor de media[5], porque seria assim: um aluno tem uma uma media só, mas eu estava reseervando
-  5 espaços de memorias para um unico dade isso e igual espaço vazio + codigo mais pesado.*/
+  um vetor de media[5], porque seria assim: um aluno tem uma uma media só, mas eu estava reservando
+  5 espaços de memorias para um unico dado isso e igual espaço vazio + codigo mais pesado.*/
 
   };
 
